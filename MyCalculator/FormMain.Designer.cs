@@ -32,7 +32,7 @@
             this.inPut2 = new System.Windows.Forms.TextBox();
             this.result = new System.Windows.Forms.Label();
             this.outPut1 = new System.Windows.Forms.TextBox();
-            this.Add1 = new System.Windows.Forms.Button();
+            this.Add = new System.Windows.Forms.Button();
             this.Sub = new System.Windows.Forms.Button();
             this.Max = new System.Windows.Forms.Button();
             this.Min = new System.Windows.Forms.Button();
@@ -70,25 +70,25 @@
             this.outPut1.Location = new System.Drawing.Point(238, 13);
             this.outPut1.Name = "outPut1";
             this.outPut1.Size = new System.Drawing.Size(64, 21);
-            this.outPut1.TabIndex = 3;
+            this.outPut1.TabIndex = 6;
             this.outPut1.TextChanged += new System.EventHandler(this.outPut1_TextChanged);
             // 
-            // Add1
+            // Add
             // 
-            this.Add1.Location = new System.Drawing.Point(13, 61);
-            this.Add1.Name = "Add1";
-            this.Add1.Size = new System.Drawing.Size(75, 23);
-            this.Add1.TabIndex = 4;
-            this.Add1.Text = "Add";
-            this.Add1.UseVisualStyleBackColor = true;
-            this.Add1.Click += new System.EventHandler(this.Add_Click);
+            this.Add.Location = new System.Drawing.Point(13, 61);
+            this.Add.Name = "Add";
+            this.Add.Size = new System.Drawing.Size(75, 23);
+            this.Add.TabIndex = 2;
+            this.Add.Text = "Add";
+            this.Add.UseVisualStyleBackColor = true;
+            this.Add.Click += new System.EventHandler(this.Add_Click);
             // 
             // Sub
             // 
             this.Sub.Location = new System.Drawing.Point(99, 60);
             this.Sub.Name = "Sub";
             this.Sub.Size = new System.Drawing.Size(75, 23);
-            this.Sub.TabIndex = 5;
+            this.Sub.TabIndex = 3;
             this.Sub.Text = "Sub";
             this.Sub.UseVisualStyleBackColor = true;
             this.Sub.Click += new System.EventHandler(this.Sub_Click);
@@ -96,11 +96,11 @@
             // Max
             // 
             this.Max.BackColor = System.Drawing.SystemColors.Control;
-            this.Max.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.Max.Cursor = System.Windows.Forms.Cursors.Default;
             this.Max.Location = new System.Drawing.Point(13, 91);
             this.Max.Name = "Max";
             this.Max.Size = new System.Drawing.Size(75, 23);
-            this.Max.TabIndex = 6;
+            this.Max.TabIndex = 4;
             this.Max.Text = "Max";
             this.Max.UseVisualStyleBackColor = false;
             this.Max.Click += new System.EventHandler(this.Max_Click_1);
@@ -110,7 +110,7 @@
             this.Min.Location = new System.Drawing.Point(99, 91);
             this.Min.Name = "Min";
             this.Min.Size = new System.Drawing.Size(75, 23);
-            this.Min.TabIndex = 7;
+            this.Min.TabIndex = 5;
             this.Min.Text = "Min";
             this.Min.UseVisualStyleBackColor = true;
             this.Min.Click += new System.EventHandler(this.Min_Click);
@@ -134,7 +134,7 @@
             this.Controls.Add(this.Min);
             this.Controls.Add(this.Max);
             this.Controls.Add(this.Sub);
-            this.Controls.Add(this.Add1);
+            this.Controls.Add(this.Add);
             this.Controls.Add(this.outPut1);
             this.Controls.Add(this.result);
             this.Controls.Add(this.inPut2);
@@ -151,7 +151,7 @@
         private System.Windows.Forms.TextBox inPut2;
         private System.Windows.Forms.Label result;
         private System.Windows.Forms.TextBox outPut1;
-        private System.Windows.Forms.Button Add1;
+        private System.Windows.Forms.Button Add;
         private System.Windows.Forms.Button Sub;
         private System.Windows.Forms.Button Max;
         private System.Windows.Forms.Button Min;
