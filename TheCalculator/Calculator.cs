@@ -19,8 +19,7 @@ namespace TheCalculator
 
             if (Regex.IsMatch(expression, @"(\d+)([\+\-\*\/]\d+)*") == false)
                 Console.WriteLine("invalid expression");
-           return  new SimpleExpressionEvaluator.ExpressionEvaluator().Evaluate(expression));
+           return  new SimpleExpressionEvaluator.ExpressionEvaluator().Evaluate(expression);
         }
     }
 } 
-}
