@@ -14,6 +14,7 @@ namespace MyCalculator
     public partial class FormMain : Form
     {
         TheCalculator.Calculator cal = new TheCalculator.Calculator();
+
         public FormMain()
         {
             InitializeComponent();
@@ -30,12 +31,13 @@ namespace MyCalculator
 
         private void InPutBox_TextChanged(object sender, EventArgs e)
         {
-
+            cal.NewExpression(Convert.ToString(this.InPutBox.Text.Trim()));
         }
 
         private void FixBotton_Click(object sender, EventArgs e)
         {
-
+            string result = cal.FixExpression();
+            this.OutPutBox.Text = result.ToString();
         }
     }
 }

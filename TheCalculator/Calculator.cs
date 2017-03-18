@@ -10,16 +10,29 @@ namespace TheCalculator
     public class Calculator
     {
         string expression;
-        public void NewExpression()
+        public void NewExpression(string exp)
         {
-            expression = Console.ReadLine();
+            expression = exp;
+            return;
         }
-        public decimal FixExpression()
+        public string FixExpression()
+        {
+
+            if (Regex.IsMatch(this.expression, @"(\d+)([\+\-\*\/]\d+)*") == false)
+            {
+                Console.WriteLine("error");
+            }
+           return  Convert.ToString(new SimpleExpressionEvaluator.ExpressionEvaluator().Evaluate(this.expression));
+        }
+        public string FixExpression(string expression)
         {
 
             if (Regex.IsMatch(expression, @"(\d+)([\+\-\*\/]\d+)*") == false)
-                Console.WriteLine("invalid expression");
-           return  new SimpleExpressionEvaluator.ExpressionEvaluator().Evaluate(expression);
+            {
+                Console.WriteLine("error");
+            }
+            return Convert.ToString(new SimpleExpressionEvaluator.ExpressionEvaluator().Evaluate(expression));
         }
+        
     }
 } 

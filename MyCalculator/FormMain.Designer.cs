@@ -72,12 +72,6 @@
 
         }
 
-        private System.Windows.Forms.TextBox inPut;
-        private System.Windows.Forms.Label result;
-        private System.Windows.Forms.TextBox outPut;
-        private System.Windows.Forms.Button Fix;
-        private System.Windows.Forms.Label master;
-        private System.Windows.Forms.Label enterLabe;
         private System.Windows.Forms.TextBox InPutBox;
         private System.Windows.Forms.TextBox OutPutBox;
         private System.Windows.Forms.Button FixBotton;
