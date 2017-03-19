@@ -34,9 +34,7 @@ namespace MyCalculator
 
         private void FixBotton_Click(object sender, EventArgs e)
 		{
-			var result = Calculator.FixExpression(Convert.ToString(this.InPutBox.Text.Trim()));
-			this.OutPutBox.Clear();
-            this.OutPutBox.Text = result;
+            this.OutPutBox.Text = Calculator.FixExpression(Convert.ToString(this.InPutBox.Text.Trim()));
         }
     }
 }
