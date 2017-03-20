@@ -41,9 +41,11 @@
 			this.AddBotton = new System.Windows.Forms.Button();
 			this.MulButton = new System.Windows.Forms.Button();
 			this.ExceptButton = new System.Windows.Forms.Button();
+			this.SumBotton = new System.Windows.Forms.Button();
+			this.RichTextBox = new System.Windows.Forms.RichTextBox();
 			this.LessBotton = new System.Windows.Forms.Button();
-			this.button4 = new System.Windows.Forms.Button();
-			this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+			this.LeftParenthesis = new System.Windows.Forms.Button();
+			this.RightParenthesis = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// NumberZero
@@ -56,6 +58,7 @@
 			this.NumberZero.TabIndex = 7;
 			this.NumberZero.Text = "0";
 			this.NumberZero.UseVisualStyleBackColor = true;
+			this.NumberZero.Click += new System.EventHandler(NumberZero_Click);
 			// 
 			// NumberOne
 			// 
@@ -67,6 +70,7 @@
 			this.NumberOne.TabIndex = 0;
 			this.NumberOne.Text = "1";
 			this.NumberOne.UseVisualStyleBackColor = true;
+			this.NumberOne.Click += new System.EventHandler(NumberOne_Click);
 			// 
 			// NumberTwo
 			// 
@@ -78,6 +82,7 @@
 			this.NumberTwo.TabIndex = 1;
 			this.NumberTwo.Text = "2";
 			this.NumberTwo.UseVisualStyleBackColor = true;
+			this.NumberTwo.Click += new System.EventHandler(NumberTwo_Click);
 			// 
 			// NumberThree
 			// 
@@ -89,6 +94,7 @@
 			this.NumberThree.TabIndex = 2;
 			this.NumberThree.Text = "3";
 			this.NumberThree.UseVisualStyleBackColor = true;
+			this.NumberThree.Click += new System.EventHandler(NumberThree_Click);
 			// 
 			// NumberSix
 			// 
@@ -100,6 +106,7 @@
 			this.NumberSix.TabIndex = 3;
 			this.NumberSix.Text = "6";
 			this.NumberSix.UseVisualStyleBackColor = true;
+			this.NumberSix.Click += new System.EventHandler(NumberSix_Click);
 			// 
 			// NumberFive
 			// 
@@ -111,6 +118,7 @@
 			this.NumberFive.TabIndex = 4;
 			this.NumberFive.Text = "5";
 			this.NumberFive.UseVisualStyleBackColor = true;
+			this.NumberFive.Click += new System.EventHandler(NumberFive_Click);
 			// 
 			// NumberFour
 			// 
@@ -122,6 +130,7 @@
 			this.NumberFour.TabIndex = 5;
 			this.NumberFour.Text = "4";
 			this.NumberFour.UseVisualStyleBackColor = true;
+			this.NumberFour.Click += new System.EventHandler(NumberFour_Click);
 			// 
 			// NumberNine
 			// 
@@ -133,6 +142,7 @@
 			this.NumberNine.TabIndex = 6;
 			this.NumberNine.Text = "9";
 			this.NumberNine.UseVisualStyleBackColor = true;
+			this.NumberNine.Click += new System.EventHandler(NumberNine_Click);
 			// 
 			// NumberEight
 			// 
@@ -144,6 +154,7 @@
 			this.NumberEight.TabIndex = 8;
 			this.NumberEight.Text = "8";
 			this.NumberEight.UseVisualStyleBackColor = true;
+			this.NumberEight.Click += new System.EventHandler(NumberEight_Click);
 			// 
 			// NumberSeven
 			// 
@@ -155,6 +166,7 @@
 			this.NumberSeven.TabIndex = 9;
 			this.NumberSeven.Text = "7";
 			this.NumberSeven.UseVisualStyleBackColor = true;
+			this.NumberSeven.Click += new System.EventHandler(NumberSeven_Click);
 			// 
 			// AddBotton
 			// 
@@ -166,6 +178,7 @@
 			this.AddBotton.TabIndex = 10;
 			this.AddBotton.Text = "+";
 			this.AddBotton.UseVisualStyleBackColor = true;
+			this.AddBotton.Click += new System.EventHandler(AddBotton_Click);
 			// 
 			// MulButton
 			// 
@@ -177,6 +190,7 @@
 			this.MulButton.TabIndex = 11;
 			this.MulButton.Text = "*";
 			this.MulButton.UseVisualStyleBackColor = true;
+			this.MulButton.Click += new System.EventHandler(MulButton_Click);
 			// 
 			// ExceptButton
 			// 
@@ -188,6 +202,29 @@
 			this.ExceptButton.TabIndex = 12;
 			this.ExceptButton.Text = "/";
 			this.ExceptButton.UseVisualStyleBackColor = true;
+			this.ExceptButton.Click += new System.EventHandler(ExceptButton_Click);
+			// 
+			// SumBotton
+			// 
+			this.SumBotton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.SumBotton.AutoSize = true;
+			this.SumBotton.Location = new System.Drawing.Point(228, 214);
+			this.SumBotton.Name = "SumBotton";
+			this.SumBotton.Size = new System.Drawing.Size(48, 45);
+			this.SumBotton.TabIndex = 14;
+			this.SumBotton.Text = "=";
+			this.SumBotton.UseVisualStyleBackColor = true;
+			this.SumBotton.Click += new System.EventHandler(this.SumBotton_Click);
+			// 
+			// RichTextBox
+			// 
+			this.RichTextBox.Location = new System.Drawing.Point(12, 12);
+			this.RichTextBox.Name = "RichTextBox";
+			this.RichTextBox.Size = new System.Drawing.Size(262, 38);
+			this.RichTextBox.TabIndex = 15;
+			this.RichTextBox.Text = "";
+			this.RichTextBox.Click += new System.EventHandler(this.richTextBox1_Click);
+			this.RichTextBox.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
 			// 
 			// LessBotton
 			// 
@@ -199,26 +236,31 @@
 			this.LessBotton.TabIndex = 13;
 			this.LessBotton.Text = "-";
 			this.LessBotton.UseVisualStyleBackColor = true;
+			this.LessBotton.Click += new System.EventHandler(this.LessBotton_Click);
 			// 
-			// button4
+			// LeftParenthesis
 			// 
-			this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.button4.AutoSize = true;
-			this.button4.Location = new System.Drawing.Point(228, 214);
-			this.button4.Name = "button4";
-			this.button4.Size = new System.Drawing.Size(48, 45);
-			this.button4.TabIndex = 14;
-			this.button4.Text = "=";
-			this.button4.UseVisualStyleBackColor = true;
+			this.LeftParenthesis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.LeftParenthesis.AutoSize = true;
+			this.LeftParenthesis.Location = new System.Drawing.Point(174, 61);
+			this.LeftParenthesis.Name = "LeftParenthesis";
+			this.LeftParenthesis.Size = new System.Drawing.Size(48, 45);
+			this.LeftParenthesis.TabIndex = 16;
+			this.LeftParenthesis.Text = "（";
+			this.LeftParenthesis.UseVisualStyleBackColor = true;
+			this.LeftParenthesis.Click += new System.EventHandler(this.LeftParenthesis_Click);
 			// 
-			// richTextBox1
+			// RightParenthesis
 			// 
-			this.richTextBox1.Location = new System.Drawing.Point(12, 12);
-			this.richTextBox1.Name = "richTextBox1";
-			this.richTextBox1.Size = new System.Drawing.Size(262, 38);
-			this.richTextBox1.TabIndex = 15;
-			this.richTextBox1.Text = "";
-			this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+			this.RightParenthesis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.RightParenthesis.AutoSize = true;
+			this.RightParenthesis.Location = new System.Drawing.Point(228, 61);
+			this.RightParenthesis.Name = "RightParenthesis";
+			this.RightParenthesis.Size = new System.Drawing.Size(48, 45);
+			this.RightParenthesis.TabIndex = 17;
+			this.RightParenthesis.Text = "）";
+			this.RightParenthesis.UseVisualStyleBackColor = true;
+			this.RightParenthesis.Click += new System.EventHandler(this.RightParenthesis_Click);
 			// 
 			// TextForm
 			// 
@@ -226,8 +268,10 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoSize = true;
 			this.ClientSize = new System.Drawing.Size(297, 271);
-			this.Controls.Add(this.richTextBox1);
-			this.Controls.Add(this.button4);
+			this.Controls.Add(this.RightParenthesis);
+			this.Controls.Add(this.LeftParenthesis);
+			this.Controls.Add(this.RichTextBox);
+			this.Controls.Add(this.SumBotton);
 			this.Controls.Add(this.LessBotton);
 			this.Controls.Add(this.ExceptButton);
 			this.Controls.Add(this.MulButton);
@@ -244,6 +288,7 @@
 			this.Controls.Add(this.NumberOne);
 			this.Name = "TextForm";
 			this.Text = "TextForm";
+			this.Load += new System.EventHandler(this.TextForm_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -261,11 +306,14 @@
 		private System.Windows.Forms.Button NumberSeven;
 		private System.Windows.Forms.Button NumberEight;
 		private System.Windows.Forms.Button NumberNine;
+
 		private System.Windows.Forms.Button AddBotton;
 		private System.Windows.Forms.Button MulButton;
 		private System.Windows.Forms.Button ExceptButton;
+		private System.Windows.Forms.Button SumBotton;
+		private System.Windows.Forms.RichTextBox RichTextBox;
 		private System.Windows.Forms.Button LessBotton;
-		private System.Windows.Forms.Button button4;
-		private System.Windows.Forms.RichTextBox richTextBox1;
+		private System.Windows.Forms.Button LeftParenthesis;
+		private System.Windows.Forms.Button RightParenthesis;
 	}
 }
